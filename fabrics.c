@@ -67,6 +67,7 @@ static const char *nvmf_queue_size	= "number of io queue elements to use (defaul
 static const char *nvmf_keep_alive_tmo	= "keep alive timeout period in seconds";
 static const char *nvmf_reconnect_delay	= "reconnect timeout period in seconds";
 static const char *nvmf_ctrl_loss_tmo	= "controller loss timeout period in seconds";
+static const char *nvmf_fast_io_fail_tmo = "fast I/O fail timeout in seconds";
 static const char *nvmf_tos		= "type of service";
 static const char *nvmf_dup_connect	= "allow duplicate connections between same transport host and subsystem port";
 static const char *nvmf_disable_sqflow	= "disable controller sq flow control (default false)";
@@ -89,6 +90,7 @@ static const char *nvmf_config_file	= "Use specified JSON configuration file or 
 	OPT_INT("keep-alive-tmo",     'k', &c.keep_alive_tmo,     nvmf_keep_alive_tmo),	\
 	OPT_INT("reconnect-delay",    'c', &c.reconnect_delay,    nvmf_reconnect_delay),\
 	OPT_INT("ctrl-loss-tmo",      'l', &c.ctrl_loss_tmo,      nvmf_ctrl_loss_tmo),	\
+	OPT_INT("fast_io_fail_tmo",   'x', &c.fast_io_fail_tmo,   nvmf_fast_io_fail_tmo), \
 	OPT_INT("tos",                'T', &c.tos,                nvmf_tos),		\
 	OPT_FLAG("duplicate-connect", 'D', &c.duplicate_connect,  nvmf_dup_connect),	\
 	OPT_FLAG("disable-sqflow",    'd', &c.disable_sqflow,     nvmf_disable_sqflow),	\
